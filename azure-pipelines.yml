@@ -35,7 +35,7 @@ steps:
           echo Container Type        : $(containerType)
           echo Container Id   : $(containerId)
           
-          $(windowsTopazWorkbenchCliHome)\SCMDownloaderCLI.bat ^
+          $(windowsTopazWorkbenchCliHome)\\SCMDownloaderCLI.bat ^
             -host $(host) ^
             -port $(port) ^
             -id $(id) ^
