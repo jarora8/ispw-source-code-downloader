@@ -1,0 +1,42 @@
+{
+    "manifestVersion": 1,
+    "id": "ispw-downloader",
+    "name": "ISPW Source Code Downloader",
+    "public": true,
+    "version": "0.0.2",
+    "publisher": "JalajPublisher",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Extension for downloading tasks from ISPW Repository and Containers",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/bmc-icon.png"        
+    },
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+    "files": [
+        {
+            "path": "downloadertask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "downloadertask"
+            }
+        }
+    ]
+}
