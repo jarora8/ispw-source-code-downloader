@@ -35,18 +35,4 @@ steps:
           echo Container Type        : $(containerType)
           echo Container Id   : $(containerId)
           
-          $(windowsTopazWorkbenchCliHome)\\SCMDownloaderCLI.bat -host $(host) ^
-            -port $(port) ^
-            -id $(id) ^
-            -pass $(password) ^
-            -protocol None ^
-            -code $(codePage) ^
-            -timeout 0 ^
-            -targetFolder $(windowsSourceDownloadLocation) ^
-            -data $(windowsSourceDownloadLocation) ^
-            -ispwServerConfig $(runtimeConfig) ^
-            -scm ispwc ^
-            -ispwContainerName $(containerId) ^
-            -ispwContainerType $(containerType) ^
-            -ispwServerLevel dev1  ^
-            -ispwDownloadAll true
+          $(windowsTopazWorkbenchCliHome)\\SCMDownloaderCLI.bat -host $(host) -port $(port) -id $(id) -pass $(password) -protocol None -code $(codePage) -timeout 0 -targetFolder $(windowsSourceDownloadLocation) -data $(windowsSourceDownloadLocation) -ispwServerConfig $(runtimeConfig) -scm ispwc -ispwContainerName $(containerId) -ispwContainerType $(containerType) -ispwServerLevel dev1 -ispwDownloadAll true
